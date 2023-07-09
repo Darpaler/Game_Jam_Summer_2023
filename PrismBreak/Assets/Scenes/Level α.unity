@@ -521,6 +521,10 @@ PrefabInstance:
       value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: goalSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 688e68c1bd090d1408889eff0cfc8baa, type: 3}
+    - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
       propertyPath: beamEmitters.Array.data[0]
       value: 
       objectReference: {fileID: 1450526656}
@@ -649,6 +653,14 @@ PrefabInstance:
     - target: {fileID: 4199572131961697783, guid: 699791e5572de58468346405effbbcd2, type: 3}
       propertyPath: m_Name
       value: Prism_Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391459934492630776, guid: 699791e5572de58468346405effbbcd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451386977776578464, guid: 699791e5572de58468346405effbbcd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4199572133807733957, guid: 699791e5572de58468346405effbbcd2, type: 3}
