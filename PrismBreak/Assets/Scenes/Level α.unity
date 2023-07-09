@@ -654,6 +654,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prism_Button
       objectReference: {fileID: 0}
+    - target: {fileID: 7391459934492630776, guid: 699791e5572de58468346405effbbcd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451386977776578464, guid: 699791e5572de58468346405effbbcd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4199572133807733957, guid: 699791e5572de58468346405effbbcd2, type: 3}
     - {fileID: 4199572133807733958, guid: 699791e5572de58468346405effbbcd2, type: 3}

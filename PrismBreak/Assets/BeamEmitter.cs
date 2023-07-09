@@ -19,17 +19,21 @@ public class BeamEmitter : MonoBehaviour
     public enum Color { Red, Blue, Green, White}
     public Color color;
 
+    private AudioSource audioSource;
+    [SerializeField]
+
     // Start is called before the first frame update
     void Start()
     {
         // Get Components
         beam = GetComponent<LineRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        CastBeam();
+         CastBeam();
     }
 
     void CastBeam()
@@ -37,7 +41,10 @@ public class BeamEmitter : MonoBehaviour
         Vector3 position = transform.position;
         Vector3 direction = transform.forward;
         bool hitMirror = false;
-        
+        int mirrorsHit = 0;
+       
+        audioSource.pitch = 1 + mirrorsHit*0.5f;
+
         beam.positionCount = 1;
 
         beam.SetPosition(0, position);
@@ -52,6 +59,7 @@ public class BeamEmitter : MonoBehaviour
                 position = hit.point;
                 direction = Vector3.Reflect(direction, hit.normal);
                 beam.SetPosition(beam.positionCount - 1, hit.point);
+
             }
             else
             {
@@ -59,6 +67,9 @@ public class BeamEmitter : MonoBehaviour
             }
 
             hitMirror = hit.transform && hit.transform.tag == "Mirror";
+
+            if (hitMirror)
+                mirrorsHit++;
 
             goalHit = hit.transform && hit.transform.tag == "Goal";
 
