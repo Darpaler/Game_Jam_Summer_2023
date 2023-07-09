@@ -10,23 +10,13 @@ public class BeamEmitter : MonoBehaviour
     private bool goalHit = false;
     private bool goalEventCompleted = false;
 
-    public enum BeamColorType {
-        White,
-        Red,
-        Green,
-        Blue
-    }
-    [SerializeField] private BeamColorType m_beamColor = BeamColorType.White;
-    public BeamColorType BeamColor { get { return m_beamColor; } }
-
-
     [SerializeField]
     private float maxBeamDistance = 300;
 
     public event EventHandler OnGoalHit;
     public event EventHandler OnGoalLost;
 
-    public enum Color { Red, Blue, Green}
+    public enum Color { Red, Blue, Green, White}
     public Color color;
 
     // Start is called before the first frame update
@@ -34,19 +24,6 @@ public class BeamEmitter : MonoBehaviour
     {
         // Get Components
         beam = GetComponent<LineRenderer>();
-
-        OnGoalHit += BeamEmitter_OnGoalHit;
-        OnGoalLost += BeamEmitter_OnGoalLost;
-    }
-
-    private void BeamEmitter_OnGoalLost(object sender, EventArgs e)
-    {
-        Debug.Log("Lost");
-    }
-
-    private void BeamEmitter_OnGoalHit(object sender, EventArgs e)
-    {
-        Debug.Log("hit");
     }
 
     // Update is called once per frame

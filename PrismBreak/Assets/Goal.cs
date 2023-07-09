@@ -39,8 +39,6 @@ public class Goal : MonoBehaviour
             currentGreen--;
         if (beam.color == BeamEmitter.Color.Blue)
             currentBlue--;
-
-        Debug.Log("R: " + currentRed + "\nG: " + currentGreen + "\nB: " + currentBlue);
     }
 
     private void Beam_OnGoalHit(object sender, System.EventArgs e)
@@ -53,8 +51,6 @@ public class Goal : MonoBehaviour
             currentGreen++;
         if (beam.color == BeamEmitter.Color.Blue)
             currentBlue++;
-
-        Debug.Log("R: " + currentRed + "\nG: " + currentGreen + "\nB: " + currentBlue);
 
         CheckGoal();
     }
