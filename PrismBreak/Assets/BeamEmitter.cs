@@ -10,6 +10,16 @@ public class BeamEmitter : MonoBehaviour
     private bool goalHit = false;
     private bool goalEventCompleted = false;
 
+    public enum BeamColorType {
+        White,
+        Red,
+        Green,
+        Blue
+    }
+    [SerializeField] private BeamColorType m_beamColor = BeamColorType.White;
+    public BeamColorType BeamColor { get { return m_beamColor; } }
+
+
     [SerializeField]
     private float maxBeamDistance = 300;
 
