@@ -22,9 +22,15 @@ public class Goal : MonoBehaviour
     [SerializeField]
     private GameObject goalBeam;
 
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private float goalSoundTime = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         goalBeam.SetActive(false);
 
         foreach(BeamEmitter beam in beamEmitters)
@@ -63,12 +69,16 @@ public class Goal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(audioSource.time);
+        if (audioSource.time >= goalSoundTime)
+            goalBeam.SetActive(true);
     }
     
     void CheckGoal() 
     {
         if (requiredRed == currentRed && requiredGreen == currentGreen && requiredBlue == currentBlue)
-            goalBeam.SetActive(true);
+        {
+            audioSource.Play();
+        }
     }
 }

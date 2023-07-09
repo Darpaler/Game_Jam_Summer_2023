@@ -521,6 +521,10 @@ PrefabInstance:
       value: Goal
       objectReference: {fileID: 0}
     - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: goalSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 688e68c1bd090d1408889eff0cfc8baa, type: 3}
+    - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
       propertyPath: beamEmitters.Array.data[0]
       value: 
       objectReference: {fileID: 1450526656}

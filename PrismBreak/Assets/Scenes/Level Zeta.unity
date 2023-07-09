@@ -275,6 +275,18 @@ PrefabInstance:
       propertyPath: beamEmitters.Array.data[2]
       value: 
       objectReference: {fileID: 1689812761}
+    - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: beamEmitters.Array.data[0]
+      value: 
+      objectReference: {fileID: 1689812761}
+    - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: beamEmitters.Array.data[1]
+      value: 
+      objectReference: {fileID: 1397660005}
+    - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: beamEmitters.Array.data[2]
+      value: 
+      objectReference: {fileID: 901986752}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
