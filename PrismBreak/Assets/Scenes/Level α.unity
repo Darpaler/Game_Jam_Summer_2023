@@ -464,6 +464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goal
       objectReference: {fileID: 0}
+    - target: {fileID: 1846038398056146408, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1846038398056146412, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -508,15 +512,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1846038398056146415, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+    - target: {fileID: 2207536494485913260, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3690388325677977541, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: m_TagString
+      value: Goal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
       propertyPath: beamEmitters.Array.data[0]
       value: 
       objectReference: {fileID: 1450526656}
-    - target: {fileID: 1846038398056146415, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+    - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
       propertyPath: beamEmitters.Array.data[1]
       value: 
       objectReference: {fileID: 1840468373}
-    - target: {fileID: 1846038398056146415, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+    - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
       propertyPath: beamEmitters.Array.data[2]
       value: 
       objectReference: {fileID: 1285579772}
@@ -638,6 +650,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prism_Button
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4199572133807733957, guid: 699791e5572de58468346405effbbcd2, type: 3}
+    - {fileID: 4199572133807733958, guid: 699791e5572de58468346405effbbcd2, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 699791e5572de58468346405effbbcd2, type: 3}
