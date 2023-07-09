@@ -7,6 +7,16 @@ public class BeamEmitter : MonoBehaviour
     // Properties
     private LineRenderer beam;
 
+    public enum BeamColorType {
+        White,
+        Red,
+        Green,
+        Blue
+    }
+    [SerializeField] private BeamColorType m_beamColor = BeamColorType.White;
+    public BeamColorType BeamColor { get { return m_beamColor; } }
+
+
     [SerializeField]
     private float maxBeamDistance = 300;
 
