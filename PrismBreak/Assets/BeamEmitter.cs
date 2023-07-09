@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,15 +7,36 @@ public class BeamEmitter : MonoBehaviour
 {
     // Properties
     private LineRenderer beam;
+    private bool goalHit = false;
+    private bool goalEventCompleted = false;
 
     [SerializeField]
     private float maxBeamDistance = 300;
+
+    public event EventHandler OnGoalHit;
+    public event EventHandler OnGoalLost;
+
+    public enum Color { Red, Blue, Green}
+    public Color color;
 
     // Start is called before the first frame update
     void Start()
     {
         // Get Components
         beam = GetComponent<LineRenderer>();
+
+        OnGoalHit += BeamEmitter_OnGoalHit;
+        OnGoalLost += BeamEmitter_OnGoalLost;
+    }
+
+    private void BeamEmitter_OnGoalLost(object sender, EventArgs e)
+    {
+        Debug.Log("Lost");
+    }
+
+    private void BeamEmitter_OnGoalHit(object sender, EventArgs e)
+    {
+        Debug.Log("hit");
     }
 
     // Update is called once per frame
@@ -32,7 +54,7 @@ public class BeamEmitter : MonoBehaviour
         beam.positionCount = 1;
 
         beam.SetPosition(0, position);
-       
+
         do
         {
             beam.positionCount++;
@@ -48,9 +70,23 @@ public class BeamEmitter : MonoBehaviour
             {
                 beam.SetPosition(beam.positionCount - 1, direction * maxBeamDistance);
             }
-            
+
             hitMirror = hit.transform && hit.transform.tag == "Mirror";
 
-        } while (hitMirror);
+            goalHit = hit.transform && hit.transform.tag == "Goal";
+
+        }while (hitMirror);
+
+        if (goalHit && !goalEventCompleted)
+        {
+            OnGoalHit?.Invoke(this, EventArgs.Empty);
+            goalEventCompleted = true;
+        }
+        
+        if (!goalHit && goalEventCompleted)
+        {
+            goalEventCompleted = false;
+            OnGoalLost?.Invoke(this, EventArgs.Empty);
+        }
     }
 }
