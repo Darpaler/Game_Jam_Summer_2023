@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
+    private bool completed = false;
+
     [SerializeField]
     private BeamEmitter[] beamEmitters;
 
@@ -26,6 +29,9 @@ public class Goal : MonoBehaviour
 
     [SerializeField]
     private float goalSoundTime = 2f;
+
+    [SerializeField]
+    private string nextLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -69,9 +75,15 @@ public class Goal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(audioSource.time);
-        if (audioSource.time >= goalSoundTime)
+        if (!completed && audioSource.time >= goalSoundTime)
+        {
+            completed = true;
             goalBeam.SetActive(true);
+        }
+        if(completed && !audioSource.isPlaying)
+        {
+            SceneManager.LoadScene(nextLevel);
+        }
     }
     
     void CheckGoal() 

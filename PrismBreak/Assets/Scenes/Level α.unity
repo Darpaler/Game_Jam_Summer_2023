@@ -516,6 +516,22 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3597081919270593529, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: m_Positions.Array.data[0].x
+      value: -55.259995
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597081919270593529, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: m_Positions.Array.data[0].z
+      value: 54.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597081919270593529, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: m_Positions.Array.data[1].x
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597081919270593529, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: m_Positions.Array.data[1].z
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3690388325677977541, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
       propertyPath: m_TagString
       value: Goal
@@ -524,6 +540,22 @@ PrefabInstance:
       propertyPath: goalSound
       value: 
       objectReference: {fileID: 8300000, guid: 688e68c1bd090d1408889eff0cfc8baa, type: 3}
+    - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: nextLevel
+      value: Level Zeta
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: nextLevelCameraPosition.x
+      value: -38.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: nextLevelCameraPosition.y
+      value: 18.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
+      propertyPath: nextLevelCameraPosition.z
+      value: 62.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6850494935217286244, guid: f1fad3ce883aa4a45aa2ebc98bb4c82c, type: 3}
       propertyPath: beamEmitters.Array.data[0]
       value: 
