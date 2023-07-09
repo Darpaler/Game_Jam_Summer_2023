@@ -3,12 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Goal
+  - Concave
+  - Convex
+  - Mirror
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ignore Beam
   - Water
   - UI
   - 

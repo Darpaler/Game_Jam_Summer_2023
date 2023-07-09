@@ -47,7 +47,7 @@ public class BeamEmitter : MonoBehaviour
             beam.positionCount++;
             Ray ray = new Ray(position, direction);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.NameToLayer("Ignore Beam")))
             {
                 position = hit.point;
                 direction = Vector3.Reflect(direction, hit.normal);
