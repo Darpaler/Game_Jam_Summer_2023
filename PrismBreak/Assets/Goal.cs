@@ -19,9 +19,14 @@ public class Goal : MonoBehaviour
     private int requiredGreen = 1;
     private int currentGreen = 0;
 
+    [SerializeField]
+    private GameObject goalBeam;
+
     // Start is called before the first frame update
     void Start()
     {
+        goalBeam.SetActive(false);
+
         foreach(BeamEmitter beam in beamEmitters)
         {
             beam.OnGoalHit += Beam_OnGoalHit;
@@ -64,6 +69,6 @@ public class Goal : MonoBehaviour
     void CheckGoal() 
     {
         if (requiredRed == currentRed && requiredGreen == currentGreen && requiredBlue == currentBlue)
-            Debug.Log("Goal");
+            goalBeam.SetActive(true);
     }
 }
